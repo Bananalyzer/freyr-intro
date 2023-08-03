@@ -38,60 +38,60 @@ Now, open the project directory in your code editor and continue to the next sec
 
 #### Create a JavaScript file
 
-- [ ] Create a folder called `js/`
-- [ ] Inside that folder, create a JavaScript file called `index.js`
-- [ ] Open your `index.html` file
-- [ ] Before the closing `</body>` tag, insert a `<script>` element with a `src` attribute that specifies the relative path to your JavaScript file (i.e. `js/index.js`)
-- [ ] Save and open in your browser
+- [X] Create a folder called `js/`
+- [X] Inside that folder, create a JavaScript file called `index.js`
+- [X] Open your `index.html` file
+- [X] Before the closing `</body>` tag, insert a `<script>` element with a `src` attribute that specifies the relative path to your JavaScript file (i.e. `js/index.js`)
+- [X] Save and open in your browser
 
 #### Add Footer Element
 
-- [ ] Open your `index.html` file
-- [ ] Above the `<script>` element, add an empty `<footer>` element
-- [ ] Save and refresh your browser
+- [X] Open your `index.html` file
+- [X] Above the `<script>` element, add an empty `<footer>` element
+- [X] Save and refresh your browser
 
 #### Insert Copyright Text in Footer
 
-- [ ] Open your `index.js` file
+- [X] Open your `index.js` file
 
-- [ ] Create a new date object and store it in a variable named `today`
+- [X] Create a new date object and store it in a variable named `today`
   - hint: `new Date()` constructor
-- [ ] Retrieve the current year from your date object and store it in a variable named `thisYear`
+- [X] Retrieve the current year from your date object and store it in a variable named `thisYear`
   - hint: `getFullYear` method
 
-- [ ] Using "DOM Selection", select the `<footer>` element from the DOM and store it in a variable named `footer`
+- [X] Using "DOM Selection", select the `<footer>` element from the DOM and store it in a variable named `footer`
   - hint: `querySelector` method
-- [ ] Create a new paragraph (`p`) element and store it in a variable named `copyright`
+- [X] Create a new paragraph (`p`) element and store it in a variable named `copyright`
   - hint: `createElement` method
-- [ ] Set the inner HTML of your `copyright` element to display your name and the current year
+- [X] Set the inner HTML of your `copyright` element to display your name and the current year
   - hint: use `thisYear` variable from earlier
-- [ ] Using "DOM Manipulation", append the `copyright` element to the footer
+- [X] Using "DOM Manipulation", append the `copyright` element to the footer
   - hint: `appendChild` method
-- [ ] Save and refresh your browser
+- [X] Save and refresh your browser
   - You should see the text "Your Name 2021" at the bottom of the page
 
 #### Add Skills Section
 
-- [ ] Open your `index.html` file
-- [ ] Above the "Connect" section, add a new `<section>` element with an `id` attribute of value "skills"
-- [ ] Inside the new section, add a `<h2>` element that says "Skills"
-- [ ] After the `<h2>` element, add an empty unordered list (`<ul>`) element
-- [ ] Save and refresh your browser
+- [X] Open your `index.html` file
+- [X] Above the "Connect" section, add a new `<section>` element with an `id` attribute of value "skills"
+- [X] Inside the new section, add a `<h2>` element that says "Skills"
+- [X] After the `<h2>` element, add an empty unordered list (`<ul>`) element
+- [X] Save and refresh your browser
   - You should see the new "Skills" heading
 
 #### Create List of Skills
 
-- [ ] Open your `index.js` file
-- [ ] List your technical skills by creating an Array of String values and store it in a variable named `skills`
-- [ ] Using "DOM Selection", select the #skills section by id and store it in a variable named `skillsSection`
+- [X] Open your `index.js` file
+- [X] List your technical skills by creating an Array of String values and store it in a variable named `skills`
+- [X] Using "DOM Selection", select the #skills section by id and store it in a variable named `skillsSection`
   - hint: `querySelector` or `getElementById` method
-- [ ] Using "DOM Selection", query the `skillsSection` (instead of the entire `document`) to find the `<ul>` element and store it in a variable named `skillsList`
-- [ ] Create a `for` loop to iterate over your `skills` Array, starting at index 0
-- [ ] Inside the loop, create a new list item (`li`) element and store it in a variable named `skill`
+- [X] Using "DOM Selection", query the `skillsSection` (instead of the entire `document`) to find the `<ul>` element and store it in a variable named `skillsList`
+- [X] Create a `for` loop to iterate over your `skills` Array, starting at index 0
+- [X] Inside the loop, create a new list item (`li`) element and store it in a variable named `skill`
   - hint: `createElement` method
-- [ ] On the next line, set the inner text of your `skill` variable to the value of the current Array element
+- [X] On the next line, set the inner text of your `skill` variable to the value of the current Array element
   - hint: access the Array element using bracket notation
-- [ ] On the next line, append the `skill` element to the `skillsList` element
+- [X] On the next line, append the `skill` element to the `skillsList` element
   - hint: `appendChild` method
 - Save and refresh your browser
   - You should see your list of skills beneath the "Skills" heading
