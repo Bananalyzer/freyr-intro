@@ -41,71 +41,71 @@ Now, open the project directory in your code editor and continue to the next sec
 
 #### Create Message Form
 
-- [ ] Open your `index.html` file
-- [ ] Above the `<footer>` element, add an empty `<section>` element
-- [ ] Inside the new `<section>` element, create a level-two heading that says "Leave a Message"
-- [ ] After the heading, create an HTML `<form>` element with a `name` attribute that equals "leave_message"
-- [ ] Inside the `<form>` element, add the following:
+- [X] Open your `index.html` file
+- [X] Above the `<footer>` element, add an empty `<section>` element
+- [X] Inside the new `<section>` element, create a level-two heading that says "Leave a Message"
+- [X] After the heading, create an HTML `<form>` element with a `name` attribute that equals "leave_message"
+- [X] Inside the `<form>` element, add the following:
   1. `<input>` element with attributes: `type` "text", `name` "usersName", and `required` true
   2. `<input>` element with attributes: `type` "email", `name` "usersEmail", and `required` true
   3. `<textarea>` element with attributes: `name` "usersMessage" and `required` true
   4. `<button>` element that says "Submit" and has `type` attribute equal to "submit"
   5. Each form field should also have a corresponding `<label>` element
   6. (Optional) Use `<br>` elements to stack the form fields
-- [ ] Save and refresh your browser
+- [X] Save and refresh your browser
 
 #### Add Message List Section
 
-- [ ] After the `<section>` element from the previous step, create a new `<section>` element with an `id` of "messages"
-- [ ] Inside that element, create a level-two heading that says "Messages"
-- [ ] After the heading, add an empty unordered list (`<ul>`) element
-- [ ] Save and refresh your browser
+- [X] After the `<section>` element from the previous step, create a new `<section>` element with an `id` of "messages"
+- [X] Inside that element, create a level-two heading that says "Messages"
+- [X] After the heading, add an empty unordered list (`<ul>`) element
+- [X] Save and refresh your browser
 
 #### Handle Message Form Submit
 
-- [ ] Open your `index.js` file and start at the bottom
-- [ ] Using "DOM Selection", select the "leave_message" form by `name` attribute and store it in a variable named `messageForm`
-- [ ] Add an event listener to the `messageForm` element that handles the "submit" event
+- [X] Open your `index.js` file and start at the bottom
+- [X] Using "DOM Selection", select the "leave_message" form by `name` attribute and store it in a variable named `messageForm`
+- [X] Add an event listener to the `messageForm` element that handles the "submit" event
   - hint: `addEventListener` method
-- [ ] Inside the callback function for your event listener, create a new variable for each of the three form fields and retrieve the value from the event
+- [X] Inside the callback function for your event listener, create a new variable for each of the three form fields and retrieve the value from the event
   - hint: `event.target` is the form, `event.target.usersName` is the first input element
-- [ ] Inside the callback function for your event listener, add a `console.log` statement to log the three variables you created in the previous step
-- [ ] Save and refresh your browser
-- [ ] Fill out the HTML form in your browser and hit "Submit"
+- [X] Inside the callback function for your event listener, add a `console.log` statement to log the three variables you created in the previous step
+- [X] Save and refresh your browser
+- [X] Fill out the HTML form in your browser and hit "Submit"
 
 > Note: at this point, you should notice that the browser is refreshing automatically when you submit your form which is not the desired behavior
 
-- [ ] Inside the callback function, above the other code you just wrote, add a new line to prevent the default refreshing behavior of the "submit" event
+- [X] Inside the callback function, above the other code you just wrote, add a new line to prevent the default refreshing behavior of the "submit" event
   - hint: `preventDefault` method
-- [ ] Save and refresh your browser
-- [ ] Fill out the HTML form in your browser and hit "Submit"
+- [X] Save and refresh your browser
+- [X] Fill out the HTML form in your browser and hit "Submit"
   - You should see that the page **does not** refresh and your values are logged in the console
 
 > Note: at this point, you should notice that the form is submitting properly but the form fields are not reset after submit
 
-- [ ] Inside the callback function, on the very last line, add a new line of code to clear the form
+- [X] Inside the callback function, on the very last line, add a new line of code to clear the form
   - hint: `reset` method
-- [ ] Save and refresh your browser
+- [X] Save and refresh your browser
 
 #### Display Messages in List
 
-- [ ] Open `index.js` and start inside the event listener callback function on the line **above** where you reset the form
-- [ ] Using "DOM Selection", select the #messages section by `id` and store it in a variable named `messageSection`
-- [ ] Using "DOM Selection", query the `messageSection` (instead of the entire `document`) to find the `<ul>` element and store it in a variable named `messageList`
-- [ ] Create a new list item (`li`) element and store it in a variable named `newMessage`
-- [ ] On the next line, set the inner HTML of your `newMessage` element with the following information:
+- [X] Open `index.js` and start inside the event listener callback function on the line **above** where you reset the form
+- [X] Using "DOM Selection", select the #messages section by `id` and store it in a variable named `messageSection`
+- [X] Using "DOM Selection", query the `messageSection` (instead of the entire `document`) to find the `<ul>` element and store it in a variable named `messageList`
+- [X] Create a new list item (`li`) element and store it in a variable named `newMessage`
+- [X] On the next line, set the inner HTML of your `newMessage` element with the following information:
   - `<a>` element that displays the "usersName" and links to the "usersEmail" (hint: use the `mailto:` prefix)
   - `<span>` element that displays the "usersMessage"
-- [ ] Create a new `<button>` element and store it in a variable named `removeButton`
+- [X] Create a new `<button>` element and store it in a variable named `removeButton`
   - Set the inner text to "remove"
   - Set the `type` attribute to "button"
   - Add an event listener to the `removeButton` element that handles the "click" event
     - Inside the callback function, find the button's parent element using DOM Traversal (hint: `parentNode` property) and store it in a variable named `entry`
     - Remove the `entry` element from the DOM (hint: `remove` method)
-- [ ] Append the `removeButton` to the `newMessage` element
+- [X] Append the `removeButton` to the `newMessage` element
   - hint: `appendChild` method
-- [ ] Append the `newMessage` to the `messageList` element
-- [ ] Save and refresh your browser
+- [X] Append the `newMessage` to the `messageList` element
+- [X] Save and refresh your browser
 
 #### Final Result
 

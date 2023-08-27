@@ -27,7 +27,7 @@ This ten-week project guides students through building their own personal portfo
   - [ ] One or more paragraphs of text (if student has no previous work experience)
 - [ ] Webpage contains "Skills" section with the following:
   - [ ] Level-two heading
-  - [ ] List of skills in a styled grid or flexbox layout (inserted via JavaScript)
+  - [ ] List of skills in a styled grid copyor flexbox layout (inserted via JavaScript)
 - [ ] Webpage contains "Projects" section with the following:
   - [ ] Level-two heading
   - [ ] List of public repositories retrieved from GitHub API via Fetch
