@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
   //Skills section
   //skills array
-  const skills = [ "Tenacity", "Pizzazz", "Laying in sunbeams like a cat", "Beginner Javascript", "Beginner HTML" ];
+  const skills = [ "Tenacity", "Pizzazz", "Laying in sunbeams like a cat", "JavaScript", "HTML5", "CSS" ];
   const skillsSection = document.getElementById('skills');
   //query the unordered list specficially
   const skillsList = skillsSection.querySelector('ul');
@@ -26,6 +26,23 @@ document.addEventListener('DOMContentLoaded', () => {
     skill.innerText = skills[i];
     skillsList.appendChild(skill); //adds the skill variables into the specific list
   }
+  
+  
+  //Experience section
+  //experience array
+  const experience = [ "Intro to Computer Programming, Code the Dream", "Job 1", "Job 2", "Job 3", "Job 4", "Job 5" ];
+  const experienceSection = document.getElementById('experience');
+  //query the unordered list specficially
+  const experienceList = experienceSection.querySelector('ul');
+  
+  //add array elements to the unordered list using a for loop
+  for (let i = 0; i < experience.length; i++ ) {
+    const exp = document.createElement('li'); //creates new list item element
+    exp.innerText = experience[i];
+    experienceList.appendChild(exp); //adds the skill variables into the specific list
+  }
+  
+  
   
   
   
@@ -43,10 +60,28 @@ document.addEventListener('DOMContentLoaded', () => {
     
     const messageSection = document.getElementById('messages');
     const messageList = messageSection.querySelector('ul');
+    
+    
+    
+    
+    
+    
+     
+    // Create a container div for each message
+    const messageContainer = document.createElement('div');
+    messageContainer.classList.add('message-container');
+    
+    
+    
+    
+    
+    
+    
+    
+    // Create new li for the message
     const newMessage = document.createElement('li');
     newMessage.innerHTML = `<a href="mailto:${email}">${name}</a> <span>${message}</span>`;
     
-   
     
     
     //Add edit button
@@ -66,9 +101,8 @@ document.addEventListener('DOMContentLoaded', () => {
     entry.remove();
   });
   
-    
   
-   
+  
   //editButton.addEventListener('click', (e) => {
   //  const button = e.target;
   //  const li = button.parentNode;
