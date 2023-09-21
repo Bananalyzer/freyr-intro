@@ -11,7 +11,8 @@
 </head>
 <body> 
   <header>  
-  <h1>Hannah</h1>
+    <div id="heading" class="heading">
+    <h1>Hannah</h1>
      
       
       <nav class="nav">
@@ -24,17 +25,20 @@
           <li><a href="#leaveMessage">Leave a Message</a></li>
         </ul>
       </nav>
+      </div>
   </header>
-    
+  <main> 
     
     <section id="about">
         <h2>About:</h2> 
-        <p>Hannah is a motivated, multifaceted person with diverse interests. Her love for cats, biology, and ecology reflect her appreciation for the natural world. She enjoys spending her time birding in order to connect more with local flora and fauna. As a creative outlet, Hannah enjoys breathing new life into old objects by refurbishing furniture. In her downtime, Hannah can be found immersing herself in video games. She also has held titles as a former pageant winner, a testament to her poise and charisma. Hannah's unique combination of passions and achievements makes her an inspiring and intriguing individual.</p>
+        <p>Hannah is a motivated, multifaceted person with diverse interests. Her love for cats, biology, and ecology reflect her appreciation for the natural world. She enjoys spending her time birding in order to connect more with local flora and fauna.
+          <p>As a creative outlet, Hannah enjoys breathing new life into old objects by refurbishing furniture. In her downtime, Hannah can be found immersing herself in video games. She also has held titles as a former pageant winner, a testament to her poise and charisma.</p>
+      <p>Like her website, Hannah is bright and colorful, without sharp edges. Also like her website, she is a work in progress. Hannah's unique combination of passions and achievements makes her an inspiring and intriguing individual.</p>
     </section>
 
     <section id="experience" class="experience">
         <h2>Experience:</h2>
-        <ul>
+        <ul class="listofthings" id="explist">
         </ul>
     </section>
 
@@ -44,22 +48,25 @@
   
   
        
-    
-    <section id="projects">
-      <h2>Projects:</h2>
-<!--list of public repositories retrieved  from GitHub API via Fetch-->
-    </section>
+
       
   
  <section id="skills" class="skills">
       <h2>Skills:</h2>
-        <ul>
+        <ul class="listofthings">
         </ul>
 <!--insert skills here via javascript in styled grid or flex layout-->
       
     </section>
   
-  
+      
+    <section id="projects">
+      <h2>Projects:</h2>
+<!--list of public repositories retrieved  from GitHub API via Fetch-->
+    </section>
+    
+    
+    
       
      <section id="connect" class="connect">
     <!-- Figure out how to add logos to hyperlinks (save images into folder and reference images?) -->
@@ -76,24 +83,31 @@
       <h2>Leave a Message:</h2>
      
      <form action="" method="post" name="leave_message">
+       <div>
        <label for="name">Name</label>
        <input type="text" id="name" name="usersName" required="true" placeholder="Name"><br>
-        
+       </div>
+         
+       <div>
        <label for="email">Email</label>
        <input type="email" id="email" name="usersEmail" required="true" placeholder="email@email.com"><br>
-        
+       </div>
+       
+       <div>
        <label for="message">Message</label>
        <textarea name="usersMessage" id="message" required="true" placeholder="Write your message here"></textarea><br>
-        
+       </div>
        
+       <div>
        <button type="submit">Submit</button>
+       </div>
       </form>
     </section>
       
       
     <section id="messages" class="messages">
       <h2>Messages:</h2>  
-        <ul></ul>
+        <ul id="messageList"></ul>
       
     </section>  
       
@@ -104,7 +118,7 @@
  “Remove” button that deletes message from list
 -->
   
-  
+    </main>
       
 <footer id="footer" class="footer">
 <!--      Copyright text with current year (inserted via Javascript)

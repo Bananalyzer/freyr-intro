@@ -1,285 +1,324 @@
 /* FOUNDATIONS/TYPE SELECTORS */
 
 :root {
-    font-size: 1.1em;
-    font-family: 'Raleway', sans-serif;
-    --mylightblue: #f0f8ff;
-    --mymediumblue: #0582ca;
-    --mydarkblue: #006494;
-    --mygreen: #558b6e;
-    --myblack: #1a181b;
-    color: var(--mydarkblue);
-    margin: 0 auto;
-    max-width: 1024px;
-    width: 90vw;
-  }
-  :focus {
-    border: 0.1em solid black;
-  }
-  ::selection {
-    color: white;
-    background: var(--mygreen);
-  }
-  
-  body {
-    background-color: var(--mylightblue);
-  }
-  
-  h1 {
-    font-size: 2em;
-    font-weight: bold;
-    text-align: start;
-    margin-left: 1em;
-  }
-  h2 {
-    font-size: 1.5em;
-    color: var(--mymediumblue);
-    font-weight: bold;
-  }
-  
-  section {
-    border: 0.1em solid var(--mydarkblue);
-    border-radius: 2em;
-    background-color: white;
-    padding: 1em;
-    margin: 1em;
-  }
-  
-  
-  
-  
-  
-  /* NAVIGATION MENU */
-  
-  .nav {
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-  }
-  
+  scroll-padding-top: 9rem; /* 130px */
+  box-sizing: border-box;
+  --mylightblue: #f0f8ff;
+  --mymediumblue: #0582ca;
+  --mydarkblue: #006494;
+  --mygreen: #558b6e;
+  --myblack: #1a181b;
+  color: var(--mydarkblue);
+  font-size: 1.1em;
+  font-family: 'Raleway', sans-serif;
+}
+:focus {
+  border: 0.1em solid black;
+}
+::selection {
+  background: var(--mygreen);
+  color: white;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  background-color: var(--mylightblue);
+  border-bottom: 0.2rem solid var(--mydarkblue);
+}
+
+
+.heading {
+  width: 80vw;
+  margin: auto;
+}
+
+
+
+body {
+  margin: 0;
+  background-color: var(--mylightblue);
+}
+
+main {
+  width: 80vw;
+  margin: auto;
+}
+
+h1 {
+  margin-left: 1em;
+  font-size: 2em;
+  font-weight: bold;
+  text-align: start;
+}
+h2 {
+  color: var(--mymediumblue);
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+section {
+  padding: 1em;
+  margin: 1em;
+  border: 0.1em solid var(--mydarkblue);
+  border-radius: 2em;
+  background-color: white;
+}
+
+
+
+
+
+/* NAVIGATION MENU */
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  list-style-type: none;
+}
+
+.menu li {
+  margin-right: 1.5em;
+  font-weight: bold;
+}
+
+.menu a:link {
+  text-decoration: none;
+  color: var(--mygreen);
+}
+
+.menu a:visited {
+  color: var(--mygreen);
+}
+
+.menu li:hover {
+  text-decoration: underline;
+}
+
+
+
+
+/* SKILLS/EXPERIENCE LIST SHARED PROPERTIES */
+
+.listofthings li {
+  height: auto;
+  width: auto;
+  padding: 1em;
+  border: 0.1em solid var(--mydarkblue);
+  border-radius: 1em;
+  color: var(--mygreen);
+  text-align: start;
+}
+
+
+
+
+/* EXPERIENCE LIST */
+
+/*FLEX BOX- GOOD DISPLAY*/
+
+.experience li {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: 0.5em;
+}
+
+/*
+#explist {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:flex-start;
+}
+*/
+
+
+
+/*
+ HOW TO MAKE INTO A GRID: 
+
+.experience li {
+  display: flex;
+  max-width: 100%;
+  margin: 0.5em;
+}
+
+#explist {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+}
+*/
+
+
+
+
+
+/* SKILLS LIST */
+
+
+.skills li {
+  display: inline-flex;
+  flex-direction: row;
+  margin: 0.1em;
+}
+
+
+
+
+/* CONNECT SECTION */
+
+.connect a:link {
+  color: var(--mygreen)
+}
+.connect a:visited {
+  color: var(--mydarkblue);
+}
+.connect a:hover {
+  text-decoration-color: var(--mydarkblue);
+}
+.connect a:visited:hover {
+  text-decoration-color: var(--mygreen);
+}
+
+
+
+
+
+
+/* MESSAGE FORM BOX */
+
+form input, form textarea {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5em;
+  border: 0.1em solid var(--mydarkblue);
+  border-radius: 0.5em;
+  margin: 0.5em 0.5em 0.5em 0;
+  width: 30%;
+}
+
+label {
+  color: var(--mygreen);
+  font-weight: bold;
+}
+
+input:invalid {
+  outline-color: red;
+}
+
+input:valid {
+  outline-color: var(--mygreen);
+}
+
+textarea:empty {
+  outline-color: red;
+}
+
+textarea:valid {
+  outline-color: var(--mygreen);
+}
+
+button {
+  border: 0.1em solid var(--mydarkblue);
+  border-radius: 1em;
+  height: 3em;
+  width: 5em;
+  background-color: var(--mymediumblue);
+  color: white;
+}
+button:hover {
+  border: 0.2em solid var(--mydarkblue);
+}
+button:active {
+  background-color: var(--mydarkblue);
+}
+
+
+
+
+/* MESSAGES LIST */
+
+.messages {
+  display: none;
+}
+
+
+.messages li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+  border: 0.1em solid var(--mydarkblue);
+  border-radius: 1em;
+  color: var(--mygreen);
+  text-align: start;
+}
+
+.messages li span {
+  width: 100%;
+  padding: 0.5em;
+}
+
+.messages a:link {
+  color: var(--mymediumblue)
+}
+.messages a:visited {
+  color: var(--mygreen);
+}
+.messages a:hover {
+  text-decoration-color: var(--mygreen);
+}
+
+.messages a:visited:hover {
+  text-decoration-color: var(--mymediumblue);
+}
+
+
+
+
+/* FOOTER */
+
+.footer {
+  width: 100%;
+  padding: 0.5em;
+  background-color: lightgrey;
+  text-align: center;
+}
+
+
+
+
+@media screen and (max-width: 768px) {
   .menu {
-    list-style-type: none;
-    display: flex;
-  }
-  
-  .menu li {
-    margin-right: 1.5em;
-    font-weight: bold;
-  }
-  
-  .menu a:link {
-    text-decoration: none;
-    color: var(--mygreen);
-  }
-  
-  .menu a:visited {
-    color: var(--mygreen);
-  }
-  
-  .menu li:hover {
-    text-decoration: underline;
-  }
-  
-  
-  
-  
-  
-  
-  
-  /* EXPERIENCE LIST */
-  
-  .experience li {
     display: block;
-    height: 1em;
-    padding: 1em;
-    border: 0.1em solid var(--mydarkblue);
-    border-radius: 1em;
-    margin: 0.5em;
-    text-align: start;
-    color: var(--mygreen);
   }
-  
-  
-  
-  
-  
-  /* SKILLS LIST */
-  
-  .skills li {
-    display: inline-block;
-    height: 1em;
-    padding: 1em;
-    border: 0.1em solid var(--mydarkblue);
-    border-radius: 1em;
-    margin: 0.1em;
-    text-align: center;
-    color: var(--mygreen);
-  }
-  
-  
-  
-  
-  /* CONNECT SECTION */
-  
-  .connect a:link {
-    color: var(--mygreen)
-  }
-  .connect a:visited {
-    color: var(--mydarkblue);
-  }
-  .connect a:hover {
-    text-decoration-color: var(--mydarkblue);
-  }
-  
-  .connect a:visited:hover {
-    text-decoration-color: var(--mygreen);
-  }
-  
-  
-  
-  
-  
-  
-  /* MESSAGE FORM BOX */
-  
-  form input, form textarea {
-    display: flex;
-    justify-content: space-between;
-    padding: 0.5em;
-    border: 0.1em solid var(--mydarkblue);
-    border-radius: 0.5em;
-    margin: 0.5em;
-    margin-left: 0;
-    width: 30%;
-  }
-  
-  label {
-    color: var(--mygreen);
-    font-weight: bold;
-  }
-  
-  input:invalid {
-    outline-color: red;
-  }
-  
-  input:valid {
-    outline-color: var(--mygreen);
-  }
-  
-  textarea:empty {
-    outline-color: red;
-  }
-  
-  textarea:valid {
-    outline-color: var(--mygreen);
-  }
-  
-  .leaveMessage {
-    box-sizing: border-box;
-  }
-  
-  button {
-    color: white;
-    background-color: var(--mymediumblue);
-    border: 0.1em solid var(--mydarkblue);
-    border-radius: 1em;
-    height: 3em;
-    width: 5em;
-  }
-  button:hover {
-    border: 0.2em solid var(--mydarkblue);
-  }
-  button:active {
-    background-color: var(--mydarkblue);
-  }
-  
-  
-  
-  
-  /* MESSAGES LIST */
-  
-  .messages li {
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
-    border: 0.1em solid var(--mydarkblue);
-    border-radius: 1em;
-    text-align: start;
-    color: var(--mygreen);
-    justify-content: center;
-  }
-  
-  .messages li span {
-    padding: 0.5em;
-    width: 100%;
-  }
-  
-  .messages a:link {
-    color: var(--mymediumblue)
-  }
-  .messages a:visited {
-    color: var(--mygreen);
-  }
-  .messages a:hover {
-    text-decoration-color: var(--mygreen);
-  }
-  
-  .messages a:visited:hover {
-    text-decoration-color: var(--mymediumblue);
-  }
-  
-  
-  
-  
-  /* FOOTER */
-  
-  .footer {
-    background-color: lightgrey;
-    text-align: center;
-    padding: 0.5em;
-    margin-bottom: 0;
-    width: 100%;
-  }
-  
-  
-  
-  
-  @media screen and (max-width: 768px) {
-    .menu {
-    list-style-type: none;
-    display: block;
-    }
-   .menu li {
+ .menu li {
     padding-bottom: 0.5em;
     text-decoration: underline;
-    }
-    form input,
-    form textarea {
-    width: 90%;
-    }
   }
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  /*
-  
-  :checked (when checkboxes are checked; add checkboxes or radio buttons to message form and add to message?)
-  -Add division between message list items
-  
-  :target (for when you click navigation links; it can highlight/change the area you navigate to)
-  
-  :hover (when hovering over something)
-  
-  :active (when an item is activated by user; for example, when clicked)
-  
-  :focus (when item has focus; highlight yellow?)
-  
-  */
+  form input,
+  form textarea {
+    width: 90%;
+  }
+  :root {
+    width: 100vw;
+    scroll-padding-top: 0;
+  }
+  header {
+    position: static;
+    height: auto;
+  }
+  .heading,
+  main {
+    width: 100vw;
+  }
+  .listofthings {
+    padding-left: 0;
+  }
+}

@@ -47,8 +47,11 @@ document.addEventListener('DOMContentLoaded', () => {
   
   
   const messageForm = document.getElementsByName('leave_message')[0];
+  const messageSection = document.getElementById('messages');
+  const messageList = messageSection.querySelector('ul');
   
   messageForm.addEventListener('submit', (e) => {
+    
     //Prevent page from refreshing when form is submitted
     e.preventDefault();
     
@@ -58,83 +61,63 @@ document.addEventListener('DOMContentLoaded', () => {
     const message = e.target.usersMessage.value;
     
     
-    const messageSection = document.getElementById('messages');
-    const messageList = messageSection.querySelector('ul');
-    
-    
-    
-    
-    
-    
-     
-    // Create a container div for each message
-    const messageContainer = document.createElement('div');
-    messageContainer.classList.add('message-container');
-    
-    
-    
-    
-    
-    
-    
-    
-    // Create new li for the message
+    // Create new li for the message. Adding .msg should make the class type of each li "msg".
     const newMessage = document.createElement('li');
+    newMessage.classList.add('msg');
     newMessage.innerHTML = `<a href="mailto:${email}">${name}</a> <span>${message}</span>`;
     
+  
     
     
-    //Add edit button
-    const editButton = document.createElement('button');
-    editButton.setAttribute('type', 'button');
-    editButton.innerText = 'edit';
+  //  //Add edit button
+  //  const editButton = document.createElement('button');
+  //  editButton.setAttribute('type', 'button');
+  //  editButton.innerText = 'edit';
+  //  newMessage.appendChild(editButton);
     
+  //  Trying to hide message section when no messages
+  if (messageList.children.length === 0) {
+    messageSection.style.display = 'none';
+  } else {
+    messageSection.style.display = 'block';
+  }  
+    
+    
+  
+  
+  
     //Add remove button
     const removeButton = document.createElement('button');
     removeButton.setAttribute('type', 'button');
-    removeButton.innerText = 'remove';
+    removeButton.innerText = 'Remove';
     newMessage.appendChild(removeButton);
     
   //set event handler to make the remove button work
   removeButton.addEventListener('click', (e) => {
     const entry = e.target.parentNode;
     entry.remove();
+    
+    //Check to see if messages section should be hidden again
+   if (messageList.children.length === 0) {
+      messageSection.style.display = 'none';
+   }
   });
   
   
-  
-  //editButton.addEventListener('click', (e) => {
-  //  const button = e.target;
-  //  const li = button.parentNode;
-  //  const span = li.querySelector('span');
-  //  const input = li.querySelector('input');
-  //    
-  //  if (button.innerText === 'edit') {
-  //      
-  //      //When edit button is clicked, allow for text input
-  //      input.value = span.textContent;
-  //      
-  //      //Provide original input in text box for editing
-  //      input.value = span.textContent;
-  //      span.style.display = 'none';
-  //      input.style.display = 'inline';
-  //      button.innerText = 'save';
-  //      
-  //      //change edit state to save state (undo the edit button and update textContent)
-  //    } else if (button.innerText === 'save') {
-  //      span.textContent = input.value
-  //      span.style.display = 'inline';
-  //      input.style.display = 'none';
-  //      button.innerText = 'edit';
-  //    }
-  //  });
-  //
-  //  newMessage.appendChild(editButton);
     
-    newMessage.appendChild(removeButton);
+    
     messageList.appendChild(newMessage);
     
+    // Reset form fields to empty
     messageForm.reset();
+    
+    
+    
+    if (messageList.children.length === 0) {
+    messageSection.style.display = 'none';
+  } else {
+    messageSection.style.display = 'block';
+  }
     
   });
   
