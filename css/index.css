@@ -1,7 +1,6 @@
 /* FOUNDATIONS/TYPE SELECTORS */
-
 :root {
-  scroll-padding-top: 9rem; /* 130px */
+  scroll-padding-top: 8rem;
   box-sizing: border-box;
   --mylightblue: #f0f8ff;
   --mymediumblue: #0582ca;
@@ -19,32 +18,24 @@
   background: var(--mygreen);
   color: white;
 }
-
 header {
   position: sticky;
   top: 0;
   background-color: var(--mylightblue);
   border-bottom: 0.2rem solid var(--mydarkblue);
 }
-
-
 .heading {
   width: 80vw;
   margin: auto;
 }
-
-
-
 body {
   margin: 0;
   background-color: var(--mylightblue);
 }
-
 main {
   width: 80vw;
   margin: auto;
 }
-
 h1 {
   margin-left: 1em;
   font-size: 2em;
@@ -56,7 +47,6 @@ h2 {
   font-size: 1.5em;
   font-weight: bold;
 }
-
 section {
   padding: 1em;
   margin: 1em;
@@ -65,47 +55,33 @@ section {
   background-color: white;
 }
 
-
-
-
-
 /* NAVIGATION MENU */
-
 .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
 .menu {
   display: flex;
   list-style-type: none;
 }
-
-.menu li {
+.menu-item {
   margin-right: 1.5em;
   font-weight: bold;
 }
-
 .menu a:link {
   text-decoration: none;
   color: var(--mygreen);
 }
-
 .menu a:visited {
   color: var(--mygreen);
 }
-
-.menu li:hover {
+.menu-item:hover {
   text-decoration: underline;
 }
 
-
-
-
 /* SKILLS/EXPERIENCE LIST SHARED PROPERTIES */
-
-.listofthings li {
+.list-of-things li {
   height: auto;
   width: auto;
   padding: 1em;
@@ -115,84 +91,54 @@ section {
   text-align: start;
 }
 
-
-
-
-/* EXPERIENCE LIST */
-
-/*FLEX BOX- GOOD DISPLAY*/
-
-.experience li {
+/* EXPERIENCE/PROJECTS LIST */
+.vertical-list li {
   display: flex;
   flex-direction: column;
-  max-width: 500px;
+  max-width: 600px;
   margin: 0.5em;
 }
-
-/*
-#explist {
-  list-style-type: none;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content:flex-start;
-}
-*/
-
-
-
-/*
- HOW TO MAKE INTO A GRID: 
-
-.experience li {
-  display: flex;
-  max-width: 100%;
-  margin: 0.5em;
-}
-
-#explist {
-  display: grid;
-  grid-template-columns: 33% 33% 33%;
-}
-*/
-
-
-
-
 
 /* SKILLS LIST */
-
-
-.skills li {
+.skills-item {
   display: inline-flex;
   flex-direction: row;
   margin: 0.1em;
 }
 
-
-
-
-/* CONNECT SECTION */
-
-.connect a:link {
+/* PROJECT AND CONNECT SECTIONS */
+.clicky-list a:link {
   color: var(--mygreen)
 }
-.connect a:visited {
+.clicky-list a:visited {
   color: var(--mydarkblue);
 }
-.connect a:hover {
+.clicky-list a:hover {
   text-decoration-color: var(--mydarkblue);
 }
-.connect a:visited:hover {
+.clicky-list a:visited:hover {
   text-decoration-color: var(--mygreen);
 }
 
+/* PROJECTS SECTION */
+#projects a:link {
+  color: var(--mydarkblue);
+}
+#projects a:hover {
+  text-decoration-color: var(--mygreen);
+}
 
-
-
-
+/*
+  Attempt to make text change when link clicked:
+  #projects p {
+    font-size: 0.9rem;
+  }
+  #projects p.clicked {
+    color: var(--mygreen);
+  }
+*/
 
 /* MESSAGE FORM BOX */
-
 form input, form textarea {
   display: flex;
   justify-content: space-between;
@@ -202,28 +148,22 @@ form input, form textarea {
   margin: 0.5em 0.5em 0.5em 0;
   width: 30%;
 }
-
 label {
   color: var(--mygreen);
   font-weight: bold;
 }
-
 input:invalid {
   outline-color: red;
 }
-
 input:valid {
   outline-color: var(--mygreen);
 }
-
 textarea:empty {
   outline-color: red;
 }
-
 textarea:valid {
   outline-color: var(--mygreen);
 }
-
 button {
   border: 0.1em solid var(--mydarkblue);
   border-radius: 1em;
@@ -239,34 +179,27 @@ button:active {
   background-color: var(--mydarkblue);
 }
 
-
-
-
 /* MESSAGES LIST */
-
 .messages {
   display: none;
 }
-
-
-.messages li {
+.messages-item {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-bottom: 1em;
   padding: 1rem;
   border: 0.1em solid var(--mydarkblue);
   border-radius: 1em;
   color: var(--mygreen);
   text-align: start;
 }
-
-.messages li span {
+.messages-item span {
   width: 100%;
   padding: 0.5em;
 }
-
 .messages a:link {
-  color: var(--mymediumblue)
+  color: var(--mydarkblue)
 }
 .messages a:visited {
   color: var(--mygreen);
@@ -274,16 +207,11 @@ button:active {
 .messages a:hover {
   text-decoration-color: var(--mygreen);
 }
-
 .messages a:visited:hover {
   text-decoration-color: var(--mymediumblue);
 }
 
-
-
-
 /* FOOTER */
-
 .footer {
   width: 100%;
   padding: 0.5em;
@@ -291,14 +219,11 @@ button:active {
   text-align: center;
 }
 
-
-
-
 @media screen and (max-width: 768px) {
   .menu {
     display: block;
   }
- .menu li {
+ .menu-item {
     padding-bottom: 0.5em;
     text-decoration: underline;
   }
@@ -318,7 +243,19 @@ button:active {
   main {
     width: 100vw;
   }
-  .listofthings {
+  .list-of-things {
     padding-left: 0;
   }
 }
+
+
+
+/*
+
+:checked (when checkboxes are checked)
+
+:target (for when you click navigation links; it can highlight/change the area you navigate to)
+
+:active (when an item is activated by user; for example, when clicked)
+
+*/
