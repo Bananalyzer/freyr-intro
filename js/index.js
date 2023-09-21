@@ -122,3 +122,64 @@ document.addEventListener('DOMContentLoaded', () => {
   });
   
   });
+  
+  
+  const githubRequest = new XMLHttpRequest();
+  githubRequest.open('GET', 'https://api.github.com/users/Hannahlyzer/repos');
+  githubRequest.send();
+  
+  
+  
+  githubRequest.addEventListener("load", (event) => {
+      const repositories = JSON.parse(githubRequest.response);
+      console.log(repositories);
+  
+  
+  const projectSection = document.getElementById("projects");
+  let projectList = projectSection.querySelector("ul");
+    for (let i = 0; i < repositories.length; i += 1) {
+      let project = document.createElement("li");
+      projectList.className = 'listofthings verticallist';
+      
+      let repoLink = document.createElement("a");
+      repoLink.id = `link${[i]}`;
+      repoLink.href = repositories[i].html_url;
+      repoLink.innerText = repositories[i].name;
+      repoLink.target = "_blank";
+          
+      
+      let repoDescription = document.createElement("p");
+      repoDescription.innerText = repositories[i].description;
+    
+      
+  // Attempting to change Projects <p> element color when <a> is clicked to maintain pretty contrast:
+  //repoLink.addEventListener("click", function () {
+  //  console.log("Link clicked");
+  //  var paragraph = document.querySelector(`.par${[i]}`);
+  //  repoLink.classList.toggle("clicked");
+  
+    
+      
+  //    Simple way to add date:
+  //    let repoDate = document.createElement("p");
+  //    let uglyDate = new Date(repositories[i].created_at);
+  //    let prettyDate = uglyDate.toDateString();
+  //    repoDate.innerText = `Created on: ${prettyDate}`
+      
+      
+  //    More complicated (but prettier) way to add date:
+      const format = { year: 'numeric', month: 'long', day: 'numeric' };
+      let createdAt = new Date(repositories[i].created_at);
+      let formattedDate = createdAt.toLocaleDateString(undefined, format);
+      let repoDate = document.createElement("p");
+      repoDate.innerText = `Created on: ${formattedDate}`;
+      
+  
+      project.appendChild(repoLink);
+      project.appendChild(repoDescription);
+      project.appendChild(repoDate);
+      
+      projectList.appendChild(project);
+      
+    };
+  });
