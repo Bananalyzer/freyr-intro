@@ -41,14 +41,14 @@ Now, open the project directory in your code editor and continue to the next sec
 
 ### Task List:
 
-- [ ] Open your `index.js` file, starting below the code from the previous lesson
-- [ ] Using the Fetch API, create a "GET" request to the same GitHub API url as before
-  - [ ] hint: the `fetch` function
-  - [ ] hint: "GET" is the default method for `fetch`
-- [ ] Chain a `then` method to your `fetch` call and pass it a function that returns the response JSON data
-- [ ] Chain another `then` method and pass it a function, inside of which you can paste the code from your previous "load" event listener function
-- [ ] Delete the `XmlHttpRequest` code from the previous lesson, including the event listener
-- [ ] Save and refresh your browser
+- [X] Open your `index.js` file, starting below the code from the previous lesson
+- [X] Using the Fetch API, create a "GET" request to the same GitHub API url as before
+  - [X] hint: the `fetch` function
+  - [X] hint: "GET" is the default method for `fetch`
+- [X] Chain a `then` method to your `fetch` call and pass it a function that returns the response JSON data
+- [X] Chain another `then` method and pass it a function, inside of which you can paste the code from your previous "load" event listener function
+- [X] Delete the `XmlHttpRequest` code from the previous lesson, including the event listener
+- [X] Save and refresh your browser
   - You should see the same list of repositories displayed on your webpage
 
 #### Stretch Goals
